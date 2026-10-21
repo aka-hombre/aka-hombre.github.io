@@ -1,0 +1,75 @@
+---
+title: "Research"
+description: "Research in computational mathematics and analysis: multimodal and interpretable machine learning, multi-agent LLM systems, and mathematical models of gestational diabetes."
+---
+
+::::: {.research .measure}
+
+My work combines computational mathematics, numerical linear algebra, and analysis. I use these tools to develop algorithms, study their accuracy and stability, and implement them efficiently
+
+Current projects are in multimodal and interpretable machine learning; earlier work modeled gestational diabetes with systems of ordinary differential equations.
+
+::: {.page-sections}
+[Computational mathematics](#computational-mathematics) [Analysis](#analysis) [Earlier work](#earlier-work)
+:::
+
+## Computational mathematics {#computational-mathematics}
+
+[Building computation around questions.]{.dek}
+
+A recurring motif in my research is finding a problem and turning it into a mathematical question. Then, finding/creating a 
+computational implimentation that can be run, checked and reproduced: a modular Python package for multimodal fusion experiments on molecular data, systems of ODEs solved and swept in Mathematica and MATLAB, and experiment pipelines that compare networks of LLM agents with a single-agent baseline.
+
+### Multimodal fusion for molecular property prediction
+
+[June 2026 – present · Lawrence Berkeley National Laboratory · PI: Talita Perciano]{.meta}
+
+A modular research package for multimodal fusion, with configurable encoders, cross-attention bridges, evaluation metrics and reproducible pipelines. I built a Q-Former bridge inspired by BLIP-2(vision language architecture) that combined Chemprop (GNN) and ChemBERTa (text) encoders to study molecular property prediction. The architecture is being extended for a DOE Genesis Mission collaboration with Berkeley, Cornell and LBNL focused on interpretable catalyst discovery.
+
+[[Software](software.qmd#multimodal-fusion-research-package)]{.related-links}
+
+### Complexity in multi-agent LLM networks
+
+[Fall 2023 – May 2025 · Arizona State University · with Dr. Joel Nishimura]{.meta}
+
+This project tested the hypothesis that generative output from networks of LLM agents can be more complex, interesting and useful than the output of a single agent such as ChatGPT. It adapted established multi-agent implementations (Swarm, ChatDev, CAMEL) to specific contexts and scenarios, and introduced ChatScript, a multi-agent paradigm that models a media production company and writing room. Preliminary findings supported the hypothesis.
+
+[[Manuscript in preparation](publications.qmd#manuscripts-in-preparation) · [Presentations](publications.qmd#presentations) · [ChatScript](software.qmd#chatscript)]{.related-links}
+
+## Analysis {#analysis}
+
+[Playing with infinity.]{.dek}
+
+Once a model is written down, the questions become what can be measured or proved about it: how its behavior depends on its parameters, and what a control can change. Analysis helps me understand convergence, approximation, and look into other toolsets like probability.
+
+### Population dynamics of gestational diabetes
+
+[June 2024 – present · MSRI-UP, Simons Laufer Mathematical Sciences Institute · with Alex Gaither and Javier Garcia Espinoza]{.meta}
+
+A new population-level model of gestational diabetes, developed at MSRI-UP 2024 (theme: Mathematical Endocrinology) from a review of the literature: a system of ODEs for transitions between healthy, gestational diabetic and type 2 diabetic states. Analysis of the model uses parameter sweeps, sensitivity analysis and optimal control to evaluate the effects of interventions, in Mathematica and MATLAB.
+
+[[Manuscript in preparation](publications.qmd#manuscripts-in-preparation) · [5 presentations](publications.qmd#presentations)]{.related-links}
+
+### Representation geometry and fusion gains
+
+[June 2026 – present · Lawrence Berkeley National Laboratory]{.meta}
+
+Part of the multimodal fusion project: evaluating whether the Gromov–Wasserstein distance between encoders predicts downstream fusion gains, across synthetic encoder regimes that separate redundant, complementary and degenerate information sources.
+
+## Earlier work {#earlier-work}
+
+[Always ready to reignite old fires.]{.dek}
+
+### Agency in chatbot networks
+
+[January – June 2024 · NCUIRE, ASU New College, Glendale]{.meta}
+
+Research with faculty mentorship on a project using large language models through the OpenAI API to explore and model agency within networks of chatbots.
+
+### Computational chemistry at the Polt Laboratory
+
+[Fall 2020 – Spring 2021 · Freshman thesis]{.meta}
+
+Attended weekly lab meetings with Ph.D. students and researchers, read the literature on effective drug delivery methods for glycopeptide drugs, and learned the foundations of computational chemistry and the lab's tools: NMR and MOE (Molecular Operating Environment).
+
+:::::

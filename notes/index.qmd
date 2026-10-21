@@ -1,0 +1,24 @@
+---
+title: "Notes"
+description: "Technical notes on mathematics and computation."
+toc: false
+number-sections: false
+listing:
+  id: notes-listing
+  # Every note at notes/<slug>/index.qmd appears here automatically,
+  # newest first. Notes with `draft: true` are hidden.
+  contents:
+    - "*/index.qmd"
+  type: default
+  sort: "date desc"
+  fields: [date, title, description, categories]
+  date-format: "MMM D, YYYY"
+  categories: true
+  filter-ui: true
+  sort-ui: false
+  feed: false
+language:
+  listing-page-no-matches: "No notes match this filter."
+---
+
+Technical notes on mathematics and computation.

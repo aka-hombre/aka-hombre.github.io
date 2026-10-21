@@ -1,0 +1,1181 @@
+/*-- scss:defaults --*/
+
+// Shared typography, spacing and shape. Color tokens ($site-*) come from
+// theme-light.scss or theme-dark.scss, which are layered before this file.
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap");
+
+$font-family-sans-serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+$font-family-base: $font-family-sans-serif;
+$font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+$headings-font-family: $font-family-sans-serif;
+
+$font-size-root: 16px;
+$font-size-base: 1.125rem;          // 18px body
+$line-height-base: 1.65;
+$headings-font-weight: 600;
+$headings-line-height: 1.3;
+$h1-font-size: 2rem;                // 32px
+$h2-font-size: 1.375rem;            // 22px
+$h3-font-size: 1.1875rem;           // 19px
+$h4-font-size: 1.0625rem;           // 17px
+$code-font-size: 0.80556em;         // 14.5px against 18px body
+$small-font-size: 0.83333em;        // 15px against 18px body
+
+// Broadsheet spacing steps (density 1.25×)
+$space-1: 5px;
+$space-2: 10px;
+$space-3: 15px;
+$space-4: 20px;
+$space-6: 30px;
+$space-8: 40px;
+$section-sm: 48px;
+$section-md: 56px;
+$section-lg: 64px;
+
+$measure: 680px;                    // reading measure
+$measure-wide: 760px;               // lists and the CV
+$page-max: 1080px;
+$page-pad: clamp(20px, 4vw, 40px);
+$bp-narrow: 760px;
+
+// Shape: 2px radius, no shadows anywhere
+$border-radius: 2px;
+$border-radius-sm: 2px;
+$border-radius-lg: 2px;
+$border-radius-pill: 2px;
+$enable-shadows: false;
+$box-shadow: none;
+$box-shadow-sm: none;
+$box-shadow-lg: none;
+$input-focus-box-shadow: none;
+$btn-focus-box-shadow: none;
+$navbar-toggler-focus-width: 0;
+$focus-ring-width: 0;
+
+$link-decoration: underline;
+$link-hover-decoration: underline;
+
+$code-block-border-left: false;
+$code-block-padding-left: 0.875rem;
+
+
+/*-- scss:rules --*/
+
+// ---------------------------------------------------------------- Base
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: $site-bg;
+  color: $site-text;
+  text-rendering: optimizeLegibility;
+}
+
+// No shadows on any page component.
+.navbar,
+.sidebar,
+.dropdown-menu,
+.card,
+.quarto-listing .card,
+.code-copy-button,
+#quarto-sidebar,
+.quarto-search {
+  box-shadow: none !important;
+}
+
+// ---------------------------------------------------------------- Links and focus
+
+a {
+  color: $site-link;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: $site-link-hover;
+  text-decoration-thickness: 2px;
+}
+
+// Visited links keep the default color.
+a:visited {
+  color: $site-link;
+}
+
+a:visited:hover {
+  color: $site-link-hover;
+}
+
+:focus-visible,
+.btn:focus-visible,
+.form-control:focus-visible,
+.navbar-toggler:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid $site-focus !important;
+  outline-offset: 2px;
+  box-shadow: none !important;
+}
+
+.btn:focus,
+.form-control:focus,
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 2000;
+  padding: 6px 12px;
+  background: $site-bg;
+  color: $site-text;
+  border: 1px solid $site-rule-strong;
+  border-radius: 2px;
+  font-size: 1rem;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 12px;
+}
+
+// ---------------------------------------------------------------- Type
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-weight: 600;
+  color: $site-text;
+}
+
+#title-block-header .title,
+main h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+main h2 {
+  font-size: 1.375rem;
+  line-height: 1.3;
+  margin-top: $section-sm;
+  margin-bottom: 0.75rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+main h3 {
+  font-size: 1.1875rem;
+  line-height: 1.35;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+main h4 {
+  font-size: 1.0625rem;
+  margin-top: 1.75rem;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+main p {
+  margin-bottom: $space-3 + 3px;
+}
+
+// Dek: the italic subtitle under a page or note title.
+#title-block-header .subtitle,
+.dek {
+  font-size: 1.1875rem;
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: 400;
+  color: $site-muted;
+  margin-top: $space-2;
+}
+
+// Meta, caption: 15 / 1.5, muted.
+.meta {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: $site-muted;
+}
+
+p.meta {
+  margin-bottom: $space-2;
+}
+
+// Label: 14 · 600 · caps · 0.08em.
+.label,
+#toc-title,
+#TOC > h2,
+.sidebar-title {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $site-muted;
+}
+
+code {
+  font-size: 0.80556em;
+}
+
+// Inline code: no colored chip; a quiet surface instead.
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  color: $site-text;
+  background-color: $site-surface;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+// ---------------------------------------------------------------- Header and navigation
+
+#quarto-header {
+  background: $site-bg;
+  border-bottom: 1px solid $site-rule;
+}
+
+.navbar {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background: $site-bg !important;
+}
+
+.navbar > .container-fluid,
+.navbar .navbar-container {
+  max-width: $page-max;
+  margin: 0 auto;
+  padding-left: $page-pad;
+  padding-right: $page-pad;
+}
+
+.navbar-brand,
+.navbar-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: $site-text !important;
+  text-decoration: none;
+}
+
+.navbar .nav-link {
+  font-size: 1rem;
+  color: $site-muted;
+  text-decoration: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar .navbar-nav {
+  gap: 0 24px;
+}
+
+.navbar .nav-link:hover {
+  color: $site-text;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+// Current section: text color plus an accent underline, so the state does
+// not rely on color alone. Quarto sets aria-current="page" on this link.
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"] {
+  color: $site-text;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  text-decoration-color: $site-link;
+}
+
+// Color-scheme toggle and mobile menu button: hairline text buttons.
+.quarto-color-scheme-toggle,
+.navbar-toggler {
+  border: 1px solid $site-rule-strong;
+  border-radius: 2px;
+  color: $site-text;
+}
+
+.quarto-color-scheme-toggle {
+  border-color: $site-rule;
+  padding: 2px 10px;
+  margin-left: 12px;
+}
+
+.quarto-color-scheme-toggle:hover {
+  border-color: $site-rule-strong;
+}
+
+.quarto-color-scheme-toggle .bi::before {
+  color: $site-muted;
+}
+
+.quarto-color-scheme-toggle:hover .bi::before {
+  color: $site-text;
+}
+
+// Name on the left, everything else to its right.
+.navbar .navbar-brand-container {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  min-width: 0;
+}
+
+// Text "Menu" button in place of the icon (design: 44px Menu button).
+.navbar-toggler-icon {
+  background-image: none !important;
+  width: auto;
+  height: auto;
+}
+
+.navbar-toggler-icon::before {
+  content: "Menu";
+  font-size: 1rem;
+  color: $site-text;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  content: "Close";
+}
+
+@media (max-width: 767.98px) {
+  .navbar .navbar-container {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .navbar .navbar-brand-container {
+    order: 1;
+    flex: 1 1 0;
+  }
+
+  .navbar .navbar-brand {
+    white-space: normal;
+  }
+
+  .navbar .quarto-navbar-tools {
+    order: 2;
+  }
+
+  .navbar .navbar-toggler {
+    order: 3;
+  }
+
+  .navbar .navbar-collapse {
+    order: 4;
+    flex-basis: 100%;
+  }
+
+  .navbar-toggler {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 8px 14px;
+  }
+
+  .quarto-color-scheme-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-collapse .navbar-nav {
+    gap: 0;
+    padding-top: $space-2;
+  }
+
+  .navbar-collapse .nav-item {
+    border-top: 1px solid $site-rule;
+  }
+
+  .navbar-collapse .nav-link {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.125rem;
+    color: $site-text;
+  }
+
+  .navbar-collapse .nav-link.active {
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+// ---------------------------------------------------------------- Footer
+
+footer.footer .nav-footer,
+.nav-footer {
+  border-top: 1px solid $site-rule;
+  background: $site-bg;
+  font-size: 0.9375rem;
+  color: $site-muted;
+  min-height: 0;
+  padding: 24px max(#{$page-pad}, calc((100% - #{$page-max}) / 2 + #{$page-pad})) 40px;
+  align-items: flex-start;
+  gap: 6px 24px;
+}
+
+.nav-footer a {
+  color: $site-link;
+}
+
+.nav-footer .nav-footer-left,
+.nav-footer .nav-footer-right {
+  color: $site-muted;
+}
+
+// ---------------------------------------------------------------- Page layout
+
+#quarto-content {
+  padding-top: $space-8;
+  padding-bottom: 72px;
+}
+
+#title-block-header {
+  margin-bottom: $space-6;
+}
+
+// `description` feeds the <meta> description and listings; pages show
+// their own lead text instead of repeating it under the title.
+#title-block-header .description {
+  display: none;
+}
+
+#title-block-header .quarto-title-meta {
+  font-size: 0.9375rem;
+  color: $site-muted;
+  margin-top: $space-3;
+  gap: 4px 28px;
+}
+
+.quarto-title-meta-heading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $site-muted;
+}
+
+.quarto-title-meta-contents,
+.quarto-title-meta-contents p {
+  color: $site-muted;
+}
+
+// Categories appear as quiet text, not colored badges.
+.quarto-title .quarto-categories .quarto-category,
+.listing-categories .listing-category {
+  background: transparent;
+  border: 1px solid $site-rule;
+  border-radius: 2px;
+  color: $site-muted;
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  opacity: 1;
+}
+
+.measure {
+  max-width: $measure;
+}
+
+.measure-wide {
+  max-width: $measure-wide;
+}
+
+// Plain lists without bullets (Current, Recent, contact).
+ul.plain,
+.plain ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.plain li {
+  margin-bottom: 12px;
+}
+
+// In-page section navigation on Research.
+nav.page-sections,
+.page-sections {
+  font-size: 1rem;
+  color: $site-muted;
+}
+
+.page-sections p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+
+// ---------------------------------------------------------------- Homepage
+
+.home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, $measure) minmax(0, 260px);
+  gap: $space-8 72px;
+  align-items: start;
+}
+
+.home-grid .home-main > :first-child {
+  margin-top: 0;
+}
+
+.home-grid h2 {
+  font-size: 1.25rem;
+  margin-top: 44px;
+}
+
+.home-aside {
+  font-size: 1rem;
+}
+
+.home-aside h2 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $site-muted;
+  margin: 6px 0 12px;
+}
+
+.home-aside section + section {
+  margin-top: 36px;
+}
+
+.home-aside ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.home-aside li {
+  margin-bottom: 8px;
+}
+
+.home-lead {
+  font-size: 1.125rem;
+  color: $site-muted;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 899.98px) {
+  .home-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+// ---------------------------------------------------------------- Research
+
+.research h2 {
+  font-size: 1.5rem;
+  margin-top: $section-lg;
+}
+
+.research h2 + .dek {
+  margin-top: 0;
+  margin-bottom: $space-3;
+}
+
+.research h3 {
+  margin-top: 36px;
+}
+
+.research h3 + .meta {
+  margin-top: 0;
+}
+
+.related-links {
+  font-size: 1rem;
+}
+
+// ---------------------------------------------------------------- Publications
+
+.pub-list {
+  padding-left: 1.4em;
+}
+
+.pub-list > li {
+  margin-bottom: $space-4;
+  padding-left: 4px;
+}
+
+.pub-list > li p {
+  margin-bottom: 0;
+}
+
+.talk-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.talk-list > li {
+  margin-bottom: 18px;
+}
+
+.talk-list > li p {
+  margin-bottom: 0;
+}
+
+.year-heading,
+main h3.year-heading {
+  font-size: 1.0625rem;
+  color: $site-muted;
+  margin-top: 28px;
+  margin-bottom: $space-2;
+}
+
+.pub-title {
+  font-style: italic;
+}
+
+// ---------------------------------------------------------------- CV rows
+
+// Definition lists render as a date column and an entry column.
+.cv dl {
+  display: grid;
+  grid-template-columns: minmax(0, 160px) minmax(0, 1fr);
+  gap: $space-2 24px;
+  margin: 0;
+}
+
+.cv dt {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: $site-muted;
+  padding-top: 3px;
+}
+
+.cv dd {
+  margin: 0;
+}
+
+.cv dd p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 759.98px) {
+  .cv dl {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .cv dd {
+    margin-bottom: $space-3;
+  }
+}
+
+// ---------------------------------------------------------------- Notes listing
+
+.quarto-listing-default .quarto-post {
+  border-top: 1px solid $site-rule;
+  border-bottom: none;
+  padding: $space-4 0;
+  margin-bottom: 0;
+}
+
+// Row: 120px date column, then title, categories and description.
+div.quarto-post.image-right,
+div.quarto-post.image-left {
+  flex-direction: row-reverse;
+  gap: 4px 28px;
+}
+
+div.quarto-post .metadata {
+  flex: 0 0 120px;
+  padding-bottom: 0;
+}
+
+div.quarto-post .body {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 575.98px) {
+  div.quarto-post.image-right,
+  div.quarto-post.image-left {
+    flex-direction: column-reverse;
+  }
+
+  div.quarto-post .metadata {
+    flex-basis: auto;
+  }
+}
+
+div.quarto-post .body h3.listing-title,
+.quarto-listing-default .quarto-post .listing-title {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.quarto-listing-default .quarto-post a {
+  text-decoration: none;
+}
+
+.quarto-listing-default .quarto-post a:hover .listing-title {
+  text-decoration: underline;
+}
+
+.quarto-listing-default .quarto-post .listing-date,
+.quarto-listing-default .quarto-post .metadata {
+  font-size: 0.9375rem;
+  color: $site-muted;
+}
+
+.quarto-listing-default .quarto-post .listing-description {
+  color: $site-text;
+}
+
+// Filter sits at the left, above the list.
+.quarto-listing .listing-actions-group {
+  justify-content: flex-start;
+  margin-bottom: $space-4;
+}
+
+.quarto-listing-filter {
+  margin-left: 0;
+  width: 100%;
+  max-width: 320px;
+}
+
+// Category index in the margin: plain text links, label-styled heading.
+.quarto-listing-category-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $site-muted;
+}
+
+.quarto-listing-category .category {
+  border: none;
+  background: transparent;
+  color: $site-link;
+  font-size: 0.9375rem;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+.quarto-listing-category .category.active {
+  color: $site-text;
+  font-weight: 600;
+}
+
+.quarto-listing .input-group,
+#listing-listing .input-group {
+  max-width: 320px;
+}
+
+.quarto-listing-filter,
+input.search.form-control {
+  min-height: 44px;
+  font-size: 1rem;
+  border: 1px solid $site-rule-strong;
+  border-radius: 2px;
+  background: $site-bg;
+  color: $site-text;
+}
+
+.input-group-text {
+  background: $site-bg;
+  border-color: $site-rule-strong;
+  color: $site-muted;
+}
+
+.listing-no-matching {
+  color: $site-muted;
+  border-top: 1px solid $site-rule;
+  padding-top: $space-4;
+}
+
+// ---------------------------------------------------------------- Notes sidebar and table of contents
+
+.sidebar nav[role="doc-toc"] ul > li > a,
+#TOC ul > li > a {
+  color: $site-muted;
+  border-left: 2px solid $site-rule;
+  padding: 4px 0 4px 12px;
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a:hover,
+#TOC ul > li > a:hover {
+  color: $site-text;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+#TOC ul > li > a.active {
+  color: $site-text;
+  font-weight: 600;
+  border-left-color: $site-link;
+}
+
+// Nested entries get no extra rule of their own.
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a,
+#TOC ul > li > ul > li > a {
+  padding-left: 24px;
+}
+
+#quarto-sidebar .sidebar-item a,
+#quarto-sidebar .sidebar-link {
+  color: $site-muted;
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+#quarto-sidebar .sidebar-link:hover {
+  color: $site-text;
+}
+
+#quarto-sidebar .sidebar-link.active,
+#quarto-sidebar .sidebar-link.active .menu-text {
+  color: $site-text;
+  font-weight: 600;
+}
+
+#quarto-sidebar .sidebar-title {
+  margin-bottom: $space-2;
+}
+
+// 56px between article and TOC: 24px grid gutter plus this padding.
+@media (min-width: 992px) {
+  #quarto-margin-sidebar {
+    padding-left: 32px;
+  }
+}
+
+// In-article copy of the TOC (toc-location: right-body): shown only below
+// 768px, where Quarto hides the margin TOC.
+#TOC-body {
+  border-top: 1px solid $site-rule;
+  border-bottom: 1px solid $site-rule;
+  padding: 12px 0;
+  margin: 0 0 28px;
+  font-size: 1rem;
+}
+
+#TOC-body ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#TOC-body ul ul {
+  padding-left: 1em;
+}
+
+#TOC-body a {
+  display: block;
+  padding: 6px 0;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+// Quarto's defaults are the reverse (body copy on wide screens, hidden on
+// narrow ones), so both sides of the md breakpoint are set explicitly.
+@media (max-width: 767.98px) {
+  #TOC-body {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #TOC-body {
+    display: none !important;
+  }
+}
+
+// Collapsed sidebar bar on narrow screens.
+.quarto-secondary-nav {
+  border-bottom: 1px solid $site-rule;
+  background: $site-bg;
+}
+
+.quarto-secondary-nav .quarto-btn-toggle {
+  min-height: 44px;
+  min-width: 44px;
+  color: $site-text;
+}
+
+.quarto-secondary-nav .breadcrumb a {
+  color: $site-link;
+}
+
+// ---------------------------------------------------------------- Previous / next
+
+.page-navigation {
+  border-top: 1px solid $site-rule;
+  margin-top: $space-8;
+  padding-top: $space-4;
+  font-size: 1rem;
+}
+
+.page-navigation a {
+  text-decoration: none;
+}
+
+.page-navigation a:hover {
+  text-decoration: underline;
+}
+
+.page-navigation .nav-page-text {
+  color: $site-link;
+}
+
+// ---------------------------------------------------------------- Mathematics
+
+// Wide display equations scroll inside their own box; the page never
+// scrolls sideways. Pandoc wraps display math in span.math.display.
+span.math.display {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0;
+}
+
+span.math.display mjx-container {
+  margin: 0.5em 0;
+}
+
+// Theorem family: framed with a hairline, statement in italic.
+.theorem,
+.lemma,
+.corollary,
+.proposition,
+.conjecture,
+.definition {
+  margin: 24px 0;
+  padding: 14px 18px;
+  border: 1px solid $site-rule;
+  border-radius: 2px;
+}
+
+.theorem > :last-child,
+.lemma > :last-child,
+.corollary > :last-child,
+.proposition > :last-child,
+.conjecture > :last-child,
+.definition > :last-child {
+  margin-bottom: 0;
+}
+
+.theorem,
+.lemma,
+.corollary,
+.proposition,
+.conjecture {
+  font-style: italic;
+}
+
+// Definitions are upright; the defined term is italic in the source.
+.definition {
+  font-style: normal;
+}
+
+.theorem-title,
+.theorem-title strong {
+  font-style: normal;
+  font-weight: 600;
+}
+
+// Examples, remarks and exercises: unframed, upright.
+.example,
+.remark,
+.exercise {
+  margin: 24px 0;
+}
+
+// Proofs: italic label, closed by a right-aligned tombstone.
+.proof {
+  margin: 0 0 24px;
+}
+
+.proof .proof-title em,
+.proof > p:first-child > .proof-title {
+  font-style: italic;
+}
+
+.proof > p:last-child::after {
+  content: "∎";
+  content: "∎" / "End of proof";
+  float: right;
+  margin-left: 1em;
+}
+
+// ---------------------------------------------------------------- Figures and tables
+
+figure,
+.quarto-figure {
+  margin: 32px 0;
+}
+
+figcaption,
+.figure-caption,
+.quarto-float-caption,
+.table-caption {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: $site-text;
+}
+
+.quarto-float-caption-top {
+  margin-bottom: 8px;
+}
+
+figure img,
+.quarto-figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-responsive,
+.cell-output-display,
+div[id^="tbl-"] {
+  overflow-x: auto;
+}
+
+table,
+.table {
+  border-collapse: collapse;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  --bs-table-bg: transparent;
+  --bs-table-color: #{$site-text};
+  color: $site-text;
+}
+
+table thead th,
+.table > thead > tr > th {
+  font-weight: 600;
+  border-bottom: 1px solid $site-rule-strong;
+  border-top: none;
+}
+
+table td,
+table th,
+.table > :not(caption) > * > * {
+  border-bottom: 1px solid $site-rule;
+  padding: 8px 12px;
+}
+
+table > tbody > tr:last-child > td,
+.table > tbody > tr:last-child > td {
+  border-bottom: 1px solid $site-rule-strong;
+}
+
+.table > :not(:first-child) {
+  border-top: none;
+}
+
+// ---------------------------------------------------------------- Code blocks
+
+div.sourceCode,
+pre.sourceCode {
+  background-color: $site-surface;
+  border: 1px solid $site-rule;
+  border-radius: 2px;
+}
+
+div.sourceCode pre.sourceCode {
+  border: none;
+}
+
+pre code,
+pre.sourceCode code {
+  font-size: 0.90625rem;   // 14.5px
+  line-height: 1.6;
+  tab-size: 4;
+}
+
+.code-with-filename .code-with-filename-file {
+  background-color: $site-surface;
+  border: 1px solid $site-rule;
+  border-bottom: 1px solid $site-rule;
+  border-radius: 2px 2px 0 0;
+  padding: 4px 14px;
+  font-size: 0.875rem;
+}
+
+.code-with-filename .code-with-filename-file pre {
+  color: $site-muted;
+  font-family: $font-family-monospace;
+}
+
+.code-with-filename div.sourceCode {
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+}
+
+.code-copy-button {
+  color: $site-link;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.code-copy-button:hover,
+.code-copy-button:focus-visible {
+  color: $site-link-hover;
+  border-color: $site-rule-strong;
+}
+
+// ---------------------------------------------------------------- Citations and footnotes
+
+#refs,
+.references {
+  font-size: 1rem;
+}
+
+.csl-entry {
+  margin-bottom: $space-2;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+section.footnotes,
+#footnotes {
+  border-top: 1px solid $site-rule;
+  margin-top: $space-8;
+  padding-top: 16px;
+  font-size: 1rem;
+}
+
+section.footnotes hr,
+#footnotes hr {
+  display: none;
+}
+
+a.footnote-ref {
+  text-decoration: none;
+  padding: 0 2px;
+}
+
+.tippy-box {
+  font-size: 0.9375rem;
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+// ---------------------------------------------------------------- Narrow screens
+
+@media (max-width: 759.98px) {
+  #title-block-header .title,
+  main h1 {
+    font-size: 1.625rem;   // 26px
+  }
+
+  #quarto-content {
+    padding-top: 28px;
+  }
+}

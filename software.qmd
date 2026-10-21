@@ -1,0 +1,34 @@
+---
+title: "Software"
+description: "Research software by Isiaha Akatlzin Rodriguez: multimodal fusion experiments, multi-agent LLM systems, and an ODE model of gestational diabetes."
+---
+
+::::: {.measure}
+
+My code is on GitHub at [github.com/aka-hombre](https://github.com/aka-hombre).
+
+## Multimodal fusion research package {#multimodal-fusion-research-package}
+
+[Python · PyTorch · More · Lawrence Berkeley National Laboratory · 2026 – present]{.meta}
+
+A modular Python package for multimodal fusion experiments: configurable encoders, cross-attention bridges, evaluation metrics and reproducible pipelines. It includes a BLIP-2-inspired Q-Former bridge over Chemprop and ChemBERTa encoders, and attention-based analysis tools for identifying which structural and textual features contribute to a model's predictions.
+
+[[Research context](research.qmd#multimodal-fusion-for-molecular-property-prediction)]{.related-links}
+
+## ChatScript {#chatscript}
+
+[Python · OpenAI API · Arizona State University]{.meta}
+
+A multi-agent paradigm that models a media production company and writing room, built alongside forks of established multi-agent implementations (Swarm, ChatDev, CAMEL). It was finalized into a poster presentation.
+
+[[Presentations](publications.qmd#presentations) · [Research context](research.qmd#complexity-in-multi-agent-llm-networks)]{.related-links}
+
+## Gestational diabetes model {#gestational-diabetes-model}
+
+[Mathematica · MATLAB · MSRI-UP · 2024 – present]{.meta}
+
+Implementation of a population-level ODE model of gestational diabetes and type 2 diabetes, with parameter sweeps, sensitivity analysis and control optimization.
+
+[[Research context](research.qmd#population-dynamics-of-gestational-diabetes)]{.related-links}
+
+:::::

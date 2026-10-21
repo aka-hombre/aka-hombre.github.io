@@ -1,0 +1,57 @@
+---
+title: "Publications and presentations"
+description: "Manuscripts in preparation and research presentations by Isiaha Akatlzin Rodriguez."
+---
+
+::::: {.measure-wide}
+
+## Manuscripts in preparation {#manuscripts-in-preparation}
+
+::: {.pub-list}
+1. **Isiaha Akatlzin Rodriguez**, Alex Gaither, Javier Garcia Espinoza.\
+   [Pregnancy, Diabetes, and Differential Equations: The Population Dynamics of Gestational Diabetes.]{.pub-title}\
+   [In preparation]{.meta}
+
+2. **Isiaha Akatlzin Rodriguez**, Joel Nishimura.\
+   [Investigating Complexity: Preliminary Findings on Multi-Agent LLM Paradigms.]{.pub-title}\
+   [In preparation]{.meta}
+:::
+
+## Presentations {#presentations}
+
+### 2026 {.year-heading}
+::: {.talk-list}
+- Math and ML: An introduction to Geometric Deep Learning\
+  [Presentation to MSRI-UP students · Simons Laufer Mathematical Sciences Institute, Berkeley, California · June 2026]{.meta}
+:::
+
+### 2025 {.year-heading}
+
+::: {.talk-list}
+- Pregnancy, Diabetes & Differential Equations: Model for the Population Dynamics of Gestational Diabetes and Development of Type 2 Diabetes.\
+  [Poster · LatMath, Institute for Pure and Applied Mathematics, Los Angeles, California · March 2025 · Winner, Undergraduate Student Poster Session]{.meta}
+
+- Analysis of a Mathematical Model for the Population Dynamics of Women with Gestational Diabetes. [With Alex Gaither and Javier Garcia Espinoza.]{.meta}\
+  [Presentation · Joint Mathematics Meetings, Seattle, Washington · January 2025]{.meta}
+:::
+
+### 2024 {.year-heading}
+
+::: {.talk-list}
+- Pregnancy, Diabetes & Differential Equations: Model for the Population Dynamics of Gestational Diabetes and Development of Type 2 Diabetes.\
+  [Poster · SACNAS, Phoenix, Arizona · October 2024]{.meta}
+
+- Math, Pregnancy, & Diabetes: Model for the Population Dynamics of Gestational Diabetes and Development of Type 2 Diabetes.\
+  [SMNS Research Seminar, Glendale, Arizona · August 2024]{.meta}
+
+- Analysis of a Mathematical Model for the Population Dynamics of Women with Gestational Diabetes. [With Alex Gaither and Javier Garcia Espinoza.]{.meta}\
+  [Presentation · MSRI-UP, Simons Laufer Mathematical Sciences Institute, Berkeley, California · July 2024]{.meta}
+
+- Will AI Replace Writers? Using LLMs to Model Media Production.\
+  [NCUIRE Symposium, Glendale, Arizona · April 2024]{.meta}
+
+- LLMs and Writing.\
+  [Machine Learning Day, Glendale, Arizona · April 2024]{.meta}
+:::
+
+:::::

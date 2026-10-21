@@ -1,0 +1,54 @@
+---
+title: "Isiaha Akatlzin Rodriguez"
+pagetitle: "Isiaha Akatlzin Rodriguez"
+description: "Ph.D. student in Applied Mathematics at Arizona State University, working on multimodal and interpretable machine learning."
+page-layout: full
+---
+
+:::::: {.home-grid}
+
+::::: {.home-main}
+
+[Ph.D. student in Applied Mathematics, School of Mathematical and Statistical Sciences, Arizona State University]{.home-lead}
+
+I am currently interested in multimodal and interpretable machine learning. One of my favorite things is when mathematics makes the world a little less mysterious. I am also passionate about supporting the success of students who are underrepresented in the mathematical sciences, like myself.
+
+More on the [research overview](research.qmd), or see [publications and presentations](publications.qmd).
+
+## Current
+
+::: {.plain}
+- Research Affiliate, Lawrence Berkeley National Laboratory, with PI Talita Perciano. [June 2026 – present]{.meta}
+- Presidential Graduate Teaching Assistantship, Arizona State University. [August 2025 – present]{.meta}
+:::
+
+## Recent
+
+::: {.plain}
+- [May 2025]{.meta} · Outstanding Undergraduate Award, Arizona State University.
+- [Mar 2025]{.meta} · Winner, LatMath Undergraduate Student Poster Session, Institute for Pure and Applied Mathematics.
+- [Jan 2025]{.meta} · Presentation at the Joint Mathematics Meetings, Seattle.
+:::
+
+:::::
+
+::::: {.home-aside}
+
+## Contact {aria-label="Contact and profiles"}
+
+- isiaharodriguez [at] asu.edu
+- [GitHub](https://github.com/aka-hombre)
+- [LinkedIn](https://www.linkedin.com/in/isiaha/)
+- [CV](cv.qmd)
+
+## Interests
+
+- Multimodal machine learning
+- Interpretable machine learning
+- Computational mathematics
+- Analysis
+- Mathematical modeling
+
+:::::
+
+::::::

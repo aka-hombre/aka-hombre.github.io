@@ -1,0 +1,84 @@
+project:
+  type: website
+  output-dir: _site
+  # Render only the site's own pages. The note template, private sources
+  # and design references are never rendered or copied into _site/.
+  render:
+    - "*.qmd"
+    - "!templates/"
+    - "!source-docs/"
+    - "!design-source/"
+    - "!README.md"
+
+website:
+  title: "Isiaha Akatlzin Rodriguez"
+  site-url: "https://aka-hombre.github.io"
+  description: "Isiaha Akatlzin Rodriguez, Ph.D. student in Applied Mathematics at Arizona State University."
+  repo-url: "https://github.com/aka-hombre/aka-hombre.github.io"
+  search: false
+  page-navigation: false
+  navbar:
+    collapse-below: md
+    right:
+      - text: Research
+        href: research.qmd
+      - text: Publications
+        href: publications.qmd
+      - text: Notes
+        href: notes/index.qmd
+      - text: Software
+        href: software.qmd
+      - text: CV
+        href: cv.qmd
+  sidebar:
+    - id: notes
+      title: "Notes"
+      style: floating
+      collapse-level: 1
+      # Reading order of the notes. Previous/next links follow this list.
+      # Add each published note here, e.g.
+      #   - notes/linear-stability/index.qmd
+      # Do not list drafts: Quarto 1.10 links listed drafts from
+      # previous/next even though it hides them elsewhere.
+      contents:
+        - text: "All notes"
+          href: notes/index.qmd
+  page-footer:
+    left: "Isiaha Akatlzin Rodriguez · Arizona State University"
+    right: "Built with [Quarto](https://quarto.org) · [Site source](https://github.com/aka-hombre/aka-hombre.github.io)"
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: [theme-light.scss, styles.scss]
+      dark: [theme-dark.scss, styles.scss]
+    respect-user-color-scheme: true
+    html-math-method: mathjax
+    include-in-header: mathjax-config.html
+    # Quarto has no built-in skip link, and website pages place
+    # include-before-body inside <main>. The script moves the link to the
+    # start of <body> so it is the first focusable element.
+    include-before-body:
+      - text: '<a class="skip-link" href="#quarto-document-content">Skip to content</a>'
+    include-after-body:
+      - text: '<script>(function(){var s=document.querySelector(".skip-link");if(s){document.body.insertBefore(s,document.body.firstChild);}})();</script>'
+    lang: en
+    highlight-style: a11y
+    code-copy: true
+    code-overflow: scroll
+    smooth-scroll: false
+    anchor-sections: true
+    link-external-icon: false
+    link-external-newwindow: false
+    citations-hover: true
+    footnotes-hover: true
+    reference-location: document
+    toc: false
+    title-block-banner: false
+    grid:
+      sidebar-width: 230px
+      body-width: 760px
+      margin-width: 210px
+      gutter-width: 1.5rem

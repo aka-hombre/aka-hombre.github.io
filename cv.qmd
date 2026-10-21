@@ -1,0 +1,119 @@
+---
+title: "CV and contact"
+description: "Curriculum vitae and contact information for Isiaha Akatlzin Rodriguez."
+---
+
+::::: {.cv .measure-wide}
+
+## Contact {#contact}
+
+Email
+: isiaharodriguez [at] asu.edu
+
+Department
+: School of Mathematical and Statistical Sciences, Arizona State University
+
+GitHub
+: [aka-hombre](https://github.com/aka-hombre)
+
+LinkedIn
+: [in/isiaha](https://www.linkedin.com/in/isiaha/)
+
+## Education {#education}
+
+In progress
+: Ph.D., Applied Mathematics, Arizona State University
+
+May 2025
+: B.S., Applied Mathematics, Arizona State University
+
+## Research experience {#research-experience}
+
+June 2026 – present
+: Machine Learning Research Affiliate, Lawrence Berkeley National Laboratory. PI: Talita Perciano. Multimodal fusion for molecular property prediction and interpretable catalyst discovery.
+
+June 2024 – present
+: Mathematical biology: population dynamics of gestational diabetes, with Alex Gaither and Javier Garcia Espinoza. Begun at MSRI-UP, Simons Laufer Mathematical Sciences Institute.
+
+June – July 2024
+: MSRI-UP (REU), SLMath/MSRI, Berkeley, California. Theme: Mathematical Endocrinology.
+
+Fall 2023 – May 2025
+: Investigating complexity with multi-agent LLM networks, Arizona State University, with Dr. Joel Nishimura.
+
+January – June 2024
+: NCUIRE Researcher, ASU New College, Glendale, Arizona. Agency within chatbot networks using large language models.
+
+Fall 2020 – Spring 2021
+: Freshman thesis: computational chemistry, MOE and the research of the Polt Laboratory.
+
+## Manuscripts and presentations {#manuscripts-and-presentations}
+
+Two manuscripts in preparation and eight presentations, 2024–2026. The full list is on [Publications](publications.qmd).
+
+## Awards, scholarships and fellowships {#awards}
+
+August 2025 – present
+: Presidential Graduate Teaching Assistantship, Arizona State University
+    - Founded a tutoring initiative for Native students in collaboration with the mathematics department, expanding access to structured math support and academic mentoring.
+
+May 2025
+: Outstanding Undergraduate Award, Arizona State University
+
+March 2025
+: Winner, LatMath Undergraduate Student Poster Session
+
+2024 – 2025
+: WAESO LSAMP (NSF); TRaIN Scholarship (NSF Grant No. 2221321); Embark Fellowship
+
+2020, 2022
+: University of Arizona National Hispanic Scholarship; Thomas R. Brown Scholarship; HN & F Berger Scholarship
+
+2015 – 2020
+: AP Scholar with Distinction (2020); National Hispanic Scholar (2019); AP Scholar with Honors (2019); Lions Club Citizenship Award (2016); NIA Public Community Service Award (2015)
+
+## Other experience {#other-experience}
+
+February 2025
+: JPMorgan Chase & Co. Quantitative Research Virtual Experience Program (Forage): estimated customers' probability of default from a book of loans, and used dynamic programming to bucket FICO scores into categories for default prediction.
+
+## Service and community {#service}
+
+August 2023 – May 2024
+: Office Assistant, American Indian Student Support Services, Glendale, Arizona
+
+Summers 2023, 2024
+: SPIRIT Program Facilitator, American Indian Student Support Services, Tempe, Arizona
+
+2022 – 2025
+: Dancer, Grupo Coatlicue, Phoenix, Arizona
+
+Fall 2020 – Spring 2021
+: Secretary, Biomedical Device Club, Tucson, Arizona
+
+Fall 2019 – Spring 2020
+: Chapter President, HOSA – Future Health Professionals, Phoenix, Arizona
+
+Fall 2018 – Spring 2020
+: Volunteer, Read Better Be Better, Phoenix, Arizona
+
+2016 – 2018
+: Intern, Cabot's Pueblo Museum, Desert Hot Springs, California
+
+
+## Skills {#skills}
+
+Languages, tools
+: Python, PyTorch, PyTorch Lightning, NumPy, SciPy, pandas, scikit-learn, MATLAB, Mathematica, Bash, Git, Jupyter, LaTeX
+
+ML and statistics
+: building ML architectures, optimization, model evaluation, time-series analysis, Monte Carlo simulation, interpretable ML, multimodal learning
+
+Scientific computing
+: ODE/PDE modeling, sensitivity analysis, reproducible pipelines, HPC/Slurm, numerical experimentation, data visualization, numerical analysis, numerical linear algebra
+
+## Professional societies {#societies}
+
+Society for Industrial and Applied Mathematics (SIAM); Society for the Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS); National Honor Society
+
+:::::

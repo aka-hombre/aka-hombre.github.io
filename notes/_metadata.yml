@@ -1,0 +1,31 @@
+# Defaults for every page in notes/. A note's own front matter overrides these.
+
+# Right-side table of contents, two levels deep. `right-body` also renders
+# a copy in the article; styles.scss shows that copy only on narrow screens,
+# where Quarto hides the margin column.
+toc: true
+toc-location: right-body
+toc-depth: 2
+toc-title: "On this page"
+number-sections: true
+
+# Previous / next links, following the order of the Notes sidebar
+page-navigation: true
+
+# Reading aids
+code-copy: true
+citations-hover: true
+footnotes-hover: true
+reference-location: document
+crossrefs-hover: true
+
+# Consistent reading width: 680px article, 210px table of contents.
+# The margin column is 242px; styles.scss pads the TOC by 32px so the
+# article-to-TOC gap is 56px (24px gutter + 32px) on wide screens.
+format:
+  html:
+    grid:
+      sidebar-width: 230px
+      body-width: 680px
+      margin-width: 242px
+      gutter-width: 1.5rem

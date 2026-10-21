@@ -2,3 +2,6 @@
 /_site/
 /design-source/
 /source-docs/
+**/*.quarto_ipynb
+
+/README.md

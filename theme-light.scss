@@ -1,0 +1,44 @@
+/*-- scss:defaults --*/
+
+// Light-mode tokens from the Design System Reference (Broadsheet ramps).
+// Contrast against $body-bg: text 14.9:1, muted 5.8:1, link 5.7:1,
+// link hover 8.8:1, focus ring 3.7:1 (non-text).
+$site-bg:          #f3f2f2;
+$site-surface:     #eae9e9;
+$site-text:        #201e1d;
+$site-muted:       #605d5d;
+$site-link:        #006786;
+$site-link-hover:  #004961;
+$site-focus:       #0088b0;
+$site-rule:        rgba(32, 30, 29, 0.16);
+$site-rule-strong: rgba(32, 30, 29, 0.34);
+
+// Bootstrap / Quarto variables
+$body-bg:    $site-bg;
+$body-color: $site-text;
+$link-color: $site-link;
+$link-hover-color: $site-link-hover;
+$text-muted: $site-muted;
+$border-color: $site-rule;
+
+$navbar-bg: $site-bg;
+$navbar-fg: $site-muted;
+$navbar-hl: $site-text;
+$navbar-brand-color: $site-text;
+$footer-bg: $site-bg;
+$footer-fg: $site-muted;
+$sidebar-bg: $site-bg;
+$sidebar-fg: $site-muted;
+$sidebar-hl: $site-text;
+$toc-color: $site-muted;
+$toc-active-border: $site-link;
+$toc-inactive-border: $site-rule;
+
+$code-block-bg: $site-surface;
+$code-bg: $site-surface;
+$code-color: $site-text;
+$table-border-color: $site-rule;
+$input-bg: $site-bg;
+$input-color: $site-text;
+$input-border-color: $site-rule-strong;
+$callout-color-note: $site-link;

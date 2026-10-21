@@ -1,0 +1,37 @@
+<!--
+  Site-wide MathJax configuration. Quarto places header includes before the
+  MathJax <script>, so this object is read when MathJax loads.
+  Add new macros here; they become available in every page and note.
+-->
+<script>
+window.MathJax = {
+  tex: {
+    macros: {
+      // Number systems
+      R: "{\\mathbb{R}}",
+      C: "{\\mathbb{C}}",
+      N: "{\\mathbb{N}}",
+      Z: "{\\mathbb{Z}}",
+      Q: "{\\mathbb{Q}}",
+      // Probability
+      E: "{\\mathbb{E}}",
+      Pp: "{\\mathbb{P}}",
+      Var: "{\\operatorname{Var}}",
+      Cov: "{\\operatorname{Cov}}",
+      // Delimiters: \norm{x}, \abs{x}, \inner{x}{y}
+      norm: ["{\\left\\lVert #1 \\right\\rVert}", 1],
+      abs: ["{\\left\\lvert #1 \\right\\rvert}", 1],
+      inner: ["{\\left\\langle #1, #2 \\right\\rangle}", 2],
+      // Upright differential: \int f(x) \dd x
+      dd: "{\\mathop{}\\!\\mathrm{d}}",
+      // Operators
+      argmin: "{\\operatorname*{arg\\,min}}",
+      argmax: "{\\operatorname*{arg\\,max}}",
+      tr: "{\\operatorname{tr}}"
+    }
+  },
+  chtml: {
+    scale: 1.0
+  }
+};
+</script>
