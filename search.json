@@ -1,0 +1,195 @@
+[
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "software.html#multimodal-fusion-research-package",
+    "href": "software.html#multimodal-fusion-research-package",
+    "title": "Software",
+    "section": "Multimodal fusion research package",
+    "text": "Multimodal fusion research package\nPython · PyTorch · More · Lawrence Berkeley National Laboratory · 2026 – present\nA modular Python package for multimodal fusion experiments: configurable encoders, cross-attention bridges, evaluation metrics and reproducible pipelines. It includes a BLIP-2-inspired Q-Former bridge over Chemprop and ChemBERTa encoders, and attention-based analysis tools for identifying which structural and textual features contribute to a model’s predictions.\nResearch context"
+  },
+  {
+    "objectID": "software.html#chatscript",
+    "href": "software.html#chatscript",
+    "title": "Software",
+    "section": "ChatScript",
+    "text": "ChatScript\nPython · OpenAI API · Arizona State University\nA multi-agent paradigm that models a media production company and writing room, built alongside forks of established multi-agent implementations (Swarm, ChatDev, CAMEL). It was finalized into a poster presentation.\nPresentations · Research context"
+  },
+  {
+    "objectID": "software.html#gestational-diabetes-model",
+    "href": "software.html#gestational-diabetes-model",
+    "title": "Software",
+    "section": "Gestational diabetes model",
+    "text": "Gestational diabetes model\nMathematica · MATLAB · MSRI-UP · 2024 – present\nImplementation of a population-level ODE model of gestational diabetes and type 2 diabetes, with parameter sweeps, sensitivity analysis and control optimization.\nResearch context"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications and presentations",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "publications.html#manuscripts-in-preparation",
+    "href": "publications.html#manuscripts-in-preparation",
+    "title": "Publications and presentations",
+    "section": "Manuscripts in preparation",
+    "text": "Manuscripts in preparation\n\n\nIsiaha Akatlzin Rodriguez, Alex Gaither, Javier Garcia Espinoza.\nPregnancy, Diabetes, and Differential Equations: The Population Dynamics of Gestational Diabetes.\nIn preparation\nIsiaha Akatlzin Rodriguez, Joel Nishimura.\nInvestigating Complexity: Preliminary Findings on Multi-Agent LLM Paradigms.\nIn preparation"
+  },
+  {
+    "objectID": "publications.html#presentations",
+    "href": "publications.html#presentations",
+    "title": "Publications and presentations",
+    "section": "Presentations",
+    "text": "Presentations\n\n2026\n\n\nMath and ML: An introduction to Geometric Deep Learning\nPresentation to MSRI-UP students · Simons Laufer Mathematical Sciences Institute, Berkeley, California · June 2026\n\n\n\n\n2025\n\n\nPregnancy, Diabetes & Differential Equations: Model for the Population Dynamics of Gestational Diabetes and Development of Type 2 Diabetes.\nPoster · LatMath, Institute for Pure and Applied Mathematics, Los Angeles, California · March 2025 · Winner, Undergraduate Student Poster Session\nAnalysis of a Mathematical Model for the Population Dynamics of Women with Gestational Diabetes. With Alex Gaither and Javier Garcia Espinoza.\nPresentation · Joint Mathematics Meetings, Seattle, Washington · January 2025\n\n\n\n\n2024\n\n\nPregnancy, Diabetes & Differential Equations: Model for the Population Dynamics of Gestational Diabetes and Development of Type 2 Diabetes.\nPoster · SACNAS, Phoenix, Arizona · October 2024\nMath, Pregnancy, & Diabetes: Model for the Population Dynamics of Gestational Diabetes and Development of Type 2 Diabetes.\nSMNS Research Seminar, Glendale, Arizona · August 2024\nAnalysis of a Mathematical Model for the Population Dynamics of Women with Gestational Diabetes. With Alex Gaither and Javier Garcia Espinoza.\nPresentation · MSRI-UP, Simons Laufer Mathematical Sciences Institute, Berkeley, California · July 2024\nWill AI Replace Writers? Using LLMs to Model Media Production.\nNCUIRE Symposium, Glendale, Arizona · April 2024\nLLMs and Writing.\nMachine Learning Day, Glendale, Arizona · April 2024"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Skip to content\n\n\n\n\nTechnical notes on mathematics and computation.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\nNo notes match this filter.",
+    "crumbs": [
+      "Notes",
+      "All notes"
+    ]
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV and contact",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "cv.html#contact",
+    "href": "cv.html#contact",
+    "title": "CV and contact",
+    "section": "Contact",
+    "text": "Contact\n\nEmail\n\nisiaharodriguez [at] asu.edu\n\nDepartment\n\nSchool of Mathematical and Statistical Sciences, Arizona State University\n\nGitHub\n\naka-hombre\n\nLinkedIn\n\nin/isiaha"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "CV and contact",
+    "section": "Education",
+    "text": "Education\n\nIn progress\n\nPh.D., Applied Mathematics, Arizona State University\n\nMay 2025\n\nB.S., Applied Mathematics, Arizona State University"
+  },
+  {
+    "objectID": "cv.html#research-experience",
+    "href": "cv.html#research-experience",
+    "title": "CV and contact",
+    "section": "Research experience",
+    "text": "Research experience\n\nJune 2026 – present\n\nMachine Learning Research Affiliate, Lawrence Berkeley National Laboratory. PI: Talita Perciano. Multimodal fusion for molecular property prediction and interpretable catalyst discovery.\n\nJune 2024 – present\n\nMathematical biology: population dynamics of gestational diabetes, with Alex Gaither and Javier Garcia Espinoza. Begun at MSRI-UP, Simons Laufer Mathematical Sciences Institute.\n\nJune – July 2024\n\nMSRI-UP (REU), SLMath/MSRI, Berkeley, California. Theme: Mathematical Endocrinology.\n\nFall 2023 – May 2025\n\nInvestigating complexity with multi-agent LLM networks, Arizona State University, with Dr. Joel Nishimura.\n\nJanuary – June 2024\n\nNCUIRE Researcher, ASU New College, Glendale, Arizona. Agency within chatbot networks using large language models.\n\nFall 2020 – Spring 2021\n\nFreshman thesis: computational chemistry, MOE and the research of the Polt Laboratory."
+  },
+  {
+    "objectID": "cv.html#manuscripts-and-presentations",
+    "href": "cv.html#manuscripts-and-presentations",
+    "title": "CV and contact",
+    "section": "Manuscripts and presentations",
+    "text": "Manuscripts and presentations\nTwo manuscripts in preparation and eight presentations, 2024–2026. The full list is on Publications."
+  },
+  {
+    "objectID": "cv.html#awards",
+    "href": "cv.html#awards",
+    "title": "CV and contact",
+    "section": "Awards, scholarships and fellowships",
+    "text": "Awards, scholarships and fellowships\n\nAugust 2025 – present\n\nPresidential Graduate Teaching Assistantship, Arizona State University\n\nFounded a tutoring initiative for Native students in collaboration with the mathematics department, expanding access to structured math support and academic mentoring.\n\n\nMay 2025\n\nOutstanding Undergraduate Award, Arizona State University\n\nMarch 2025\n\nWinner, LatMath Undergraduate Student Poster Session\n\n2024 – 2025\n\nWAESO LSAMP (NSF); TRaIN Scholarship (NSF Grant No. 2221321); Embark Fellowship\n\n2020, 2022\n\nUniversity of Arizona National Hispanic Scholarship; Thomas R. Brown Scholarship; HN & F Berger Scholarship\n\n2015 – 2020\n\nAP Scholar with Distinction (2020); National Hispanic Scholar (2019); AP Scholar with Honors (2019); Lions Club Citizenship Award (2016); NIA Public Community Service Award (2015)"
+  },
+  {
+    "objectID": "cv.html#other-experience",
+    "href": "cv.html#other-experience",
+    "title": "CV and contact",
+    "section": "Other experience",
+    "text": "Other experience\n\nFebruary 2025\n\nJPMorgan Chase & Co. Quantitative Research Virtual Experience Program (Forage): estimated customers’ probability of default from a book of loans, and used dynamic programming to bucket FICO scores into categories for default prediction."
+  },
+  {
+    "objectID": "cv.html#service",
+    "href": "cv.html#service",
+    "title": "CV and contact",
+    "section": "Service and community",
+    "text": "Service and community\n\nAugust 2023 – May 2024\n\nOffice Assistant, American Indian Student Support Services, Glendale, Arizona\n\nSummers 2023, 2024\n\nSPIRIT Program Facilitator, American Indian Student Support Services, Tempe, Arizona\n\n2022 – 2025\n\nDancer, Grupo Coatlicue, Phoenix, Arizona\n\nFall 2020 – Spring 2021\n\nSecretary, Biomedical Device Club, Tucson, Arizona\n\nFall 2019 – Spring 2020\n\nChapter President, HOSA – Future Health Professionals, Phoenix, Arizona\n\nFall 2018 – Spring 2020\n\nVolunteer, Read Better Be Better, Phoenix, Arizona\n\n2016 – 2018\n\nIntern, Cabot’s Pueblo Museum, Desert Hot Springs, California"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "CV and contact",
+    "section": "Skills",
+    "text": "Skills\n\nLanguages, tools\n\nPython, PyTorch, PyTorch Lightning, NumPy, SciPy, pandas, scikit-learn, MATLAB, Mathematica, Bash, Git, Jupyter, LaTeX\n\nML and statistics\n\nbuilding ML architectures, optimization, model evaluation, time-series analysis, Monte Carlo simulation, interpretable ML, multimodal learning\n\nScientific computing\n\nODE/PDE modeling, sensitivity analysis, reproducible pipelines, HPC/Slurm, numerical experimentation, data visualization, numerical analysis, numerical linear algebra"
+  },
+  {
+    "objectID": "cv.html#societies",
+    "href": "cv.html#societies",
+    "title": "CV and contact",
+    "section": "Professional societies",
+    "text": "Professional societies\nSociety for Industrial and Applied Mathematics (SIAM); Society for the Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS); National Honor Society"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Isiaha Akatlzin Rodriguez",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "index.html#current",
+    "href": "index.html#current",
+    "title": "Isiaha Akatlzin Rodriguez",
+    "section": "Current",
+    "text": "Current\n\n\nResearch Affiliate, Lawrence Berkeley National Laboratory, with PI Talita Perciano. June 2026 – present\nPresidential Graduate Teaching Assistantship, Arizona State University. August 2025 – present"
+  },
+  {
+    "objectID": "index.html#recent",
+    "href": "index.html#recent",
+    "title": "Isiaha Akatlzin Rodriguez",
+    "section": "Recent",
+    "text": "Recent\n\n\nMay 2025 · Outstanding Undergraduate Award, Arizona State University.\nMar 2025 · Winner, LatMath Undergraduate Student Poster Session, Institute for Pure and Applied Mathematics.\nJan 2025 · Presentation at the Joint Mathematics Meetings, Seattle."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Isiaha Akatlzin Rodriguez",
+    "section": "Contact",
+    "text": "Contact\n\nisiaharodriguez [at] asu.edu\nGitHub\nLinkedIn\nCV"
+  },
+  {
+    "objectID": "index.html#interests",
+    "href": "index.html#interests",
+    "title": "Isiaha Akatlzin Rodriguez",
+    "section": "Interests",
+    "text": "Interests\n\nMultimodal machine learning\nInterpretable machine learning\nComputational mathematics\nAnalysis\nMathematical modeling"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Skip to content"
+  },
+  {
+    "objectID": "research.html#computational-mathematics",
+    "href": "research.html#computational-mathematics",
+    "title": "Research",
+    "section": "Computational mathematics",
+    "text": "Computational mathematics\nBuilding computation around questions.\nA recurring motif in my research is finding a problem and turning it into a mathematical question. Then, finding/creating a computational implimentation that can be run, checked and reproduced: a modular Python package for multimodal fusion experiments on molecular data, systems of ODEs solved and swept in Mathematica and MATLAB, and experiment pipelines that compare networks of LLM agents with a single-agent baseline.\n\nMultimodal fusion for molecular property prediction\nJune 2026 – present · Lawrence Berkeley National Laboratory · PI: Talita Perciano\nA modular research package for multimodal fusion, with configurable encoders, cross-attention bridges, evaluation metrics and reproducible pipelines. I built a Q-Former bridge inspired by BLIP-2(vision language architecture) that combined Chemprop (GNN) and ChemBERTa (text) encoders to study molecular property prediction. The architecture is being extended for a DOE Genesis Mission collaboration with Berkeley, Cornell and LBNL focused on interpretable catalyst discovery.\nSoftware\n\n\nComplexity in multi-agent LLM networks\nFall 2023 – May 2025 · Arizona State University · with Dr. Joel Nishimura\nThis project tested the hypothesis that generative output from networks of LLM agents can be more complex, interesting and useful than the output of a single agent such as ChatGPT. It adapted established multi-agent implementations (Swarm, ChatDev, CAMEL) to specific contexts and scenarios, and introduced ChatScript, a multi-agent paradigm that models a media production company and writing room. Preliminary findings supported the hypothesis.\nManuscript in preparation · Presentations · ChatScript"
+  },
+  {
+    "objectID": "research.html#analysis",
+    "href": "research.html#analysis",
+    "title": "Research",
+    "section": "Analysis",
+    "text": "Analysis\nPlaying with infinity.\nOnce a model is written down, the questions become what can be measured or proved about it: how its behavior depends on its parameters, and what a control can change. Analysis helps me understand convergence, approximation, and look into other toolsets like probability.\n\nPopulation dynamics of gestational diabetes\nJune 2024 – present · MSRI-UP, Simons Laufer Mathematical Sciences Institute · with Alex Gaither and Javier Garcia Espinoza\nA new population-level model of gestational diabetes, developed at MSRI-UP 2024 (theme: Mathematical Endocrinology) from a review of the literature: a system of ODEs for transitions between healthy, gestational diabetic and type 2 diabetic states. Analysis of the model uses parameter sweeps, sensitivity analysis and optimal control to evaluate the effects of interventions, in Mathematica and MATLAB.\nManuscript in preparation · 5 presentations\n\n\nRepresentation geometry and fusion gains\nJune 2026 – present · Lawrence Berkeley National Laboratory\nPart of the multimodal fusion project: evaluating whether the Gromov–Wasserstein distance between encoders predicts downstream fusion gains, across synthetic encoder regimes that separate redundant, complementary and degenerate information sources."
+  },
+  {
+    "objectID": "research.html#earlier-work",
+    "href": "research.html#earlier-work",
+    "title": "Research",
+    "section": "Earlier work",
+    "text": "Earlier work\nAlways ready to reignite old fires.\n\nAgency in chatbot networks\nJanuary – June 2024 · NCUIRE, ASU New College, Glendale\nResearch with faculty mentorship on a project using large language models through the OpenAI API to explore and model agency within networks of chatbots.\n\n\nComputational chemistry at the Polt Laboratory\nFall 2020 – Spring 2021 · Freshman thesis\nAttended weekly lab meetings with Ph.D. students and researchers, read the literature on effective drug delivery methods for glycopeptide drugs, and learned the foundations of computational chemistry and the lab’s tools: NMR and MOE (Molecular Operating Environment)."
+  }
+]
