@@ -1,6 +1,8 @@
 [
   {
     "listing": "/notes/index.html",
-    "items": []
+    "items": [
+      "/notes/dft-and-differentiation/index.html"
+    ]
   }
 ]
