@@ -1,0 +1,148 @@
+---
+title: "Differentiation and the Discrete Fourier Transform"
+subtitle: "intuition on behavior of some PDEs"
+description: "seeing differential operators tangibly"
+author: "Isiaha Akatlzin Rodriguez"
+date: 2026-10-28
+categories: [Analysis, Spectral Methods, PDEs, Numerical Linear Algebra, Computational Math]
+draft: False
+---
+
+## Background {#sec-setup}
+There are plenty of ways to define the Fourier Transform, but here we'll define the 
+Fourier Transform of a function $u\in L^2[0,2\pi]$ as
+\begin{align*}
+\mathcal{F}[u](x)=\sum_{n\in\mathbb{Z}}\hat{u} e^{inx}\quad(\star)\\
+\text{where}\ \hat{u}_n=\frac{1}{2\pi}\int_0^{2\pi}u(x)e^{-inx}dx.
+\end{align*}
+$\mathcal{F}[u](x)$ is the Fourier Representation of $u$, and $\hat{u}_n$ are the Fourier coefficients.
+Our truncated Fourier Representation $\mathcal{F}_N$ is defined as 
+$$
+\mathcal{F}_N[u](x)=\sum_{|n|\le N}\hat{u}_n e^{inx}.
+$$
+
+### Quick Remarks:
+If we define an inner product $\inner{f}{g}:=\frac{1}{2\pi}\int_0^{2\pi}f\bar{g}dx$, 
+the set $\{e^{inx}: n\in\mathbb{Z}\}$ is orthanormal with respect to the above inner product 
+\begin{align*}
+\inner{e^{imx}}{e^{inx}} &= \frac{1}{2\pi}\int_0^{2\pi} e^{i(m-n)x}\,dx
+  = \frac{1}{2\pi i(m-n)} e^{i(m-n)x}\bigg|_0^{2\pi} = 0, \quad m\neq n, \\
+\inner{e^{inx}}{e^{inx}} &= 1.
+\end{align*}
+Notice $\hat{u}_n = \inner{u}{e^{inx}}$, so each of our Fourier terms is a projection of $u$ 
+onto one of our basis funcitons, i.e. the Fourier basis.
+
+By the completeness of $L_2$ and the Fourier basis, we get the equality of $(\star)$. 
+
+*We will show this some other time*
+
+## Discritizaiton {#sec-discritizaiton}
+
+Suppose we have a function $f$ on the real interval $[0,2\pi]$, then we can discritize the
+interval with $2N + 1$ points where $x_j = j(\frac{2\pi}{2N+1})$ and $j\in[2N]$. Additionally, 
+we would like to interpolate the funciton values at each $x_j$, i.e.
+$$
+f(x_j)=\sum_{|k|\le N} \hat{f}_k e^{ikx_j}.
+$$
+Let $\mathbf E$ be a $(2N+1)\times (2N+1)$ matrix such that $(E)_{j m} = e^{ik x_j}$ where $j\in[2N]$ corresponds 
+to the row indices and $m\in[2N]$ corresponds to column indices such that $m=1\mapsto k= -N,\ \dots,\ m= 2N+1 \mapsto k=N$.
+Then let $\mathbf{\hat{f}}=(\hat{f}_{-N},\dots, \hat{f}_N)^T$ and we can represent our interpolation scheme as
+$$
+\mathbf E\mathbf{\hat{f}} = \mathbf{f}(\mathbf{x})
+$$
+where $\mathbf E$ is called the Fourier Matrix. 
+
+::: {#thm-fourier_matrix_orth}
+.  $\mathbf E$ is orthoganal.
+:::
+
+::: {.proof}
+Let our discritizaiton scheme from above hold. We will show $\mathbf E^* \mathbf E$ is a diagonal matrix. Let $(\mathbf E^*)_{\ell_1,:}$ 
+denote a row of $\mathbf E^*$ and $(\mathbf E)_{:, \ell_2}$ denote a column of $\mathbf E$. Then,
+we have two cases.
+
+$Case \ 1:\ (\ell_1=\ell_2)$. 
+\begin{align*}
+(\mathbf E^* \mathbf E)_{\ell_1, \ell_1} 
+&= \sum_{j=0}^{2N}e^{-i\ell_1 x_j}e^{i\ell_2 x_j}\\
+&= \sum_{j=0}^{2N}e^{i(-\ell_1+\ell_2)x_j} \\
+&= \sum_{j=0}^{2N} 1 = 2N+1
+\end{align*}
+
+$Case \ 2:\ (\ell_1\ne \ell_2)$
+\begin{align*}
+(\mathbf E^* \mathbf E)_{\ell_1, \ell_1} 
+&= \sum_{j=0}^{2N}e^{-i\ell_1 x_j}e^{i\ell_2 x_j}\\
+&= \sum_{j=0}^{2N}e^{i(-\ell_1+\ell_2)x_j} \\
+&= \sum_{j=0}^{2N}e^{i(-\ell_1+\ell_2)(\frac{2\pi}{2N+1})j}\\
+&= \bigg(\frac{1-e^{i(\ell_2-\ell_1)2\pi}}{1-e^{i(-\ell_1+\ell_2)(\frac{2\pi}{2N+1})}}   \bigg)=0
+\end{align*}
+since
+$$
+|e^{i(-\ell_1+\ell_2)(\frac{2\pi}{2N+1})}|< 1\quad\text{and}\quad e^{i(\ell_2-\ell_1)2\pi}=1.
+$$
+Hence $\mathbf E^* \mathbf E=\frac{1}{2N+1}\mathbf I$.
+:::
+
+::: {#cor-dft}
+## Discrete Fourier Transform
+
+The Discrete Fourier Transform is given by 
+$$
+\hat f_k = \frac{1}{2N+1}\sum_{j=0}^{2N} f(x_j)e^{-ikx_j}
+$$
+:::
+
+::: {.proof}
+Let $\mathbf E \mathbf{\hat f} = \mathbf f$. Multiplying by $\mathbf E^*$ on the left yeilds, 
+\begin{align*}
+\mathbf E^* \mathbf E \mathbf{\hat f}&=\mathbf E^* \mathbf f\\
+\mathbf{\hat f}&=\frac{1}{2N+1}\mathbf E^* \mathbf f
+\end{align*}
+which implies the corollary above.
+:::
+
+## Differentiation {#sec-differentiation}
+
+In the computational setting differential operators get discritized, i.e. they become matrices.
+Lets consider a discritizaiton with $N$ points and $f$ as above
+\begin{align*}
+f(x)&\approx \sum_{n\in S_n}\hat{f}_n e^{inx}& S_n=\begin{cases}-\frac{N}{2},\dots,\frac{N}{2}-1&if\ N\ even\\ -\frac{N-1}{2},\dots,\frac{N-1}{2}&if \ N\ odd\end{cases}\\
+\hat{f}_n&=\frac{1}{N}\sum_{j=0}^{N-1} f(x_j)e^{-inx_j}&x_j = j\frac{2\pi}{N}.
+\end{align*}
+Then
+$$
+\mathbf D_N^{m}f(x_j)\approx \sum_{n\in S_n}\hat{f}_n (in)^m e^{inx},
+$$
+which can be represented as matrix vector multiplicaiton
+\begin{align*}
+\mathbf D_N^{m}\mathbf f
+&\approx\frac{1}{\sqrt N}\mathbf E\mathrm{diag}((in)^m, \dots, (in)^m)\mathbf{\hat f}\\
+&=\frac{1}{N}\mathbf E\ \mathbf{\mathrm{diag}}((in)^m, \dots, (in)^m)\ \mathbf E^*\mathbf f
+\end{align*}
+by @cor-dft. Then we get $\mathbf D_N^{m}=\frac{1}{N}\mathbf E\ \mathbf{\mathrm{diag}}((in)^m, \dots, (in)^m)\ \mathbf E^*$,
+which is the eigen-decomposition of $\mathbf D_N^{m}$ in the Fourier basis. 
+
+Notice the eigenvalue of $\mathbf D_N^{m}$ are real and negative when $m$ is even and strictly imaginary when $m$ is odd.
+
+## PDEs {#sec-PDEs}
+Consider the 1-D transport equation $u_t=u_{x}$, then by discritizing the PDE we get 
+$$
+\frac{d}{dt}\overrightarrow{u}(t)=\mathbf D_N\overrightarrow{u}(t).
+$$
+Indeed $\mathbf D_N$ has complex eigenvalues in the Fourier basis. Further, 
+\begin{align*}
+\mathbf D_N \mathbf D_N^*
+&=\frac{1}{N^2}\mathbf E\ \mathbf{\mathrm{diag}}((in)^m, \dots, (in)^m)\ \mathbf E^*(\mathbf E\ \mathbf{\mathrm{diag}}((in)^m, \dots, (in)^m)\ \mathbf E^*)^*\\
+&=\mathbf I
+\end{align*}
+so let $\mathbf x, \mathbf y\in\mathbb{R}^N$, then $\|\mathbf D_N \mathbf x -\mathbf D_N \mathbf y\|=\|\mathbf D_N(\mathbf x-\mathbf y)\|=\|\mathbf x-\mathbf y\|$. 
+Hence, as an operator $\mathbf D_N$ preserves rigid motions in euclidian space, as expected by the transport equation.
+
+
+Now consider the 1-D diffusion equation $u_t=u_{xx}$, then by discritizing the PDE we get
+$$
+\frac{d}{dt}\overrightarrow{u}(t)=\mathbf D^2_N\overrightarrow{u}(t).
+$$
+Since $\mathbf D^2_N$ has real negative eigenvalues, from the ODE perspective we can think of the PDE as decaying to 
+a fixed point in the Fourier basis, i.e. the $k=0$ wavenumber.  

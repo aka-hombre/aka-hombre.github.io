@@ -43,6 +43,7 @@ website:
       contents:
         - text: "All notes"
           href: notes/index.qmd
+        - notes/dft-and-differentiation/index.qmd
   page-footer:
     left: "Isiaha Akatlzin Rodriguez · Arizona State University"
     right: "Built with [Quarto](https://quarto.org) · [Site source](https://github.com/aka-hombre/aka-hombre.github.io)"
