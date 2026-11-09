@@ -25,6 +25,9 @@ More on the [research overview](research.qmd), or see [publications and presenta
 ## Recent
 
 ::: {.plain}
+- 
+- [June 2026]{.meta} Math and ML: An introduction to Geometric Deep Learning
+  (Presentation) Simons Laufer Mathematical Sciences Institute, Berkeley, California
 - [May 2025]{.meta} · Outstanding Undergraduate Award, Arizona State University.
 - [Mar 2025]{.meta} · Winner, LatMath Undergraduate Student Poster Session, Institute for Pure and Applied Mathematics.
 - [Jan 2025]{.meta} · Presentation at the Joint Mathematics Meetings, Seattle.
